@@ -1,57 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddToDo from "./Components/addToDo";
+import Navbar from "./Components/Navbar/Navbar";
+import ToDoState from './Context/ToDo/ToDoState';
+
+import Reports from './Components/pages/Reports';
+import Products from './Components/pages/Products';
+import Login from './Components/Auth/Login';
+import './App.css';
 
 
 // const array = [];
 
-function App() {
-  const [Todo, SetTodo] = useState("");
-  const [Text, SetText] = useState(["Buy Milk" , "Buy Bread" , "Buy Eggs"]);
+const App= ()=> {
 
-  function handeling(event) {
-    const newValue = event.target.value;
-    SetTodo(newValue);
-  }
-
-  function handelClick() {
-    SetText((pre) => {
-      
-      return[...pre , Todo]
-
-
-
-    })
-  }
-
-var bool = false;
+    return (   
+        <ToDoState>
+            <Router>
+                <Navbar />
+                <Switch>
+                    <AddToDo />
+                    <Route exact path='/' component={AddToDo} />
+                    <Route exact path='/reports' component={Reports} />
+                    <Route exact path='/login' component={Login} />
+                    
+                    </Switch>
+                </Router>
+            </ToDoState>
 
 
 
+          );
+       }
 
-  return (
-    <div className="container">
-      <div className="heading">
-        <h1>To-Do list</h1>
-      </div>
-      <div className="form">
-        <input name = "text" onChange={handeling} type="text" />
-        <button onClick={handelClick}>
-          <span>add</span>
-        </button>
-        
-      </div>
-      <div>
-      
-        <ul>
-          
-      {Text.map((x) =>
-        
-   
-      <li><input type ="checkbox"></input>{x}</li>
-        )}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-export default App;
+          export default App;
