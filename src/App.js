@@ -4,10 +4,12 @@ import AddToDo from "./Components/addToDo";
 import Navbar from "./Components/Navbar/Navbar";
 import ToDoState from './Context/ToDo/ToDoState';
 
-import Reports from './Components/pages/Reports';
-import Products from './Components/pages/Products';
+
+
 import Login from './Components/Auth/Login';
+import { signin } from "./Components/Auth/signin";
 import './App.css';
+import { Resgister } from "./Components/Auth/Resgister";
 
 
 // const array = [];
@@ -19,10 +21,12 @@ const App= ()=> {
             <Router>
                 <Navbar />
                 <Switch>
-                    <AddToDo />
+                   
                     <Route exact path='/' component={AddToDo} />
-                    <Route exact path='/reports' component={Reports} />
-                    <Route exact path='/login' component={Login} />
+                    <Route exact path = "/login" component = {signin} />
+                    <Route exact path = "/Register" component = {Resgister} />
+                  
+                   
                     
                     </Switch>
                 </Router>

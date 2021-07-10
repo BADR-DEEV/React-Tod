@@ -26,7 +26,8 @@ const ToDoState = props => {
 			ADDToDO,
 			ItemToDo:state
 		}}>
-			{props.children}
+		{props.children}
+			
 		</ToDoContext.Provider>
 	)
 }

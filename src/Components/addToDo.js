@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import ToDO from  "./toDo";
 import ToDoState from "../Context/ToDo/ToDoContext";
-
+// import login from './Auth/Login'
 //main function is to add a to do
 const AddToDo = () => {
     const toDoState = useContext(ToDoState)
@@ -19,10 +19,13 @@ const AddToDo = () => {
     }
 
     const handelClick = (e) => {
+        
+      
 
         ADDToDO(Todo);
 
         SetTodo([null])
+        
 
        
 
@@ -33,11 +36,12 @@ const AddToDo = () => {
     return (
 
         <div className="container">
+
             <div className="heading">
                 <h1>To-Do list</h1>
             </div>
             <div className="form">
-                <input name="text" onChange={handeling} type="text" value={Todo} />
+                <input required name="text" onChange={handeling} type="text" value={Todo}  />
                 <button onClick={handelClick}>
                     <span>add</span>
                     
