@@ -10,7 +10,7 @@ import {
 } from '../types';
 
 const ToDoState = props => {
-	const initialState = []
+	const initialState = ["task1","task2"]
 
 
 	const [state, dispatch] = useReducer(ToDoReducer, initialState);

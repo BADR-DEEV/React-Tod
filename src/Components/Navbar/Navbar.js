@@ -1,14 +1,47 @@
-import React from 'react';
+import React , { useContext} from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../Context/Auth/AuthContext'
+
+// import logOut from "../../Context/Auth/AuthState"
+
 
 import "../Navbar/NavBar.css"
 
 
+
 const Navbar=()=> {
+  
+
+
+
+    const authContext = useContext(AuthContext)
+    const { logOut , isAuthenticated } = authContext
+
+
+
+   const onLogOut = ()=> {
+    logOut()
+
+   }
     return (
-                <nav>
-                     <div>
-                            <Link id= "link" to="/login">
+                <fragment>
+                     {localStorage.isAuthenticated  ?  (<nav>
+                     <div> <Link onClick = {onLogOut} id= "link" to="#">
+                            sign out  
+                            </Link>
+                            </div>
+                            <div>
+                       
+                            <Link id = "link2" to = "/">
+                                    
+                                       
+                                    </Link>
+                                  
+                                    </div> 
+                                    </nav>
+                         
+                     ): (<nav>
+                        <div>  <Link id= "link" to="/login">
                             sign in  
                             </Link>
                             </div>
@@ -20,7 +53,10 @@ const Navbar=()=> {
                                     </Link>
                                   
                                     </div>
-                </nav>
+                                    </nav>)}
+                                    </fragment>
+                         
+                
     );
 }
 export default Navbar;

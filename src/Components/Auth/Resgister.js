@@ -2,7 +2,7 @@ import React, { useState, useContext,useEffect }from "react"
 import AuthContext from "../../Context/Auth/AuthContext";
 
 
-import "./signin.css"
+import "./SigninStyles.css"
 
 
 const Resgister = (props) => {
@@ -10,12 +10,13 @@ const Resgister = (props) => {
     const { Register, isAuthenticated} = authState
 
      const [auth, setAuth] = useState({
-         email: '',
-         password: "",
-         password2: ""
+        username:"",
+        email: '',
+         password: ""
+         
      })
 
-    const { email, password, password2 } = auth;
+    const {username, email, password } = auth;
     useEffect(() => {
         if (localStorage.isAuthenticated) {
             //redirect to the main page if logged in 
@@ -32,18 +33,31 @@ const Resgister = (props) => {
      const onSubmit = e => {
          e.preventDefault();
          Register({
-             email,
-             password,
-             password2
+            username,
+            email,
+             password
+             
+             
          });
 
      };
 
 return(
     <div id="container">
-        <form className="form" onSubmit={onSubmit}>
+        <form id="form" method = "POST" onSubmit={onSubmit}>
         <h1 id = "signH1">Enter Your Account</h1>
 <br/>
+<div>
+       
+       <
+           required />
+</div>
+<div>
+        
+        <input id="input2" type="text" placeholder="Username" name="username" value={username} required
+            onChange={onChange}/>
+ </div>
+
 <div>
         
                 <input id="input2" type="email" placeholder="Email address" name="email" value={email} required
@@ -56,12 +70,8 @@ return(
                 <input id="input2" type="password" placeholder="password" name="password" value={password} required
                     onChange={onChange}/>
          </div>
-         <div>
+         
        
-                <input id="input2" type="password" placeholder="Confirm password" name="password2" value={password2}
-                    onChange={onChange}
-                    required />
-         </div>
 
             <button type='submit' > Sign up   </button>
 

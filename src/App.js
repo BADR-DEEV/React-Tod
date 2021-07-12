@@ -6,10 +6,9 @@ import AddToDo from "./Components/addToDo";
 import Navbar from "./Components/Navbar/Navbar";
 import Login from "./Components/Auth/Login";
 import Resgister from "./Components/Auth/Resgister";
+import PrivateRoute from "./Components/privetRout"
 
 
-
-import './App.css';
 
 
 
@@ -24,7 +23,7 @@ const App= ()=> {
                 <Navbar />
                 <Switch>
                    
-                    <Route exact path='/' component={AddToDo} />
+                    <PrivateRoute exact path='/' component={AddToDo} />
                         <Route exact path="/login" component={Login} />
                     <Route exact path = "/Register" component = {Resgister} />
                   
