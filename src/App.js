@@ -7,7 +7,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Login from "./Components/Auth/Login";
 import Resgister from "./Components/Auth/Resgister";
 import PrivateRoute from "./Components/privetRout"
-
+import setAuthToken from "./utils/setAuthToken"
+import Year from "./Components/footer";
 
 
 
@@ -15,6 +16,9 @@ import PrivateRoute from "./Components/privetRout"
 // const array = [];
 
 const App= ()=> {
+    if(localStorage.token){
+setAuthToken(localStorage.token)
+    }
 
     return (  
         <AuthState>
@@ -22,19 +26,14 @@ const App= ()=> {
             <Router>
                 <Navbar />
                 <Switch>
-                   
                     <PrivateRoute exact path='/' component={AddToDo} />
                         <Route exact path="/login" component={Login} />
                     <Route exact path = "/Register" component = {Resgister} />
-                  
-                   
-                    
                     </Switch>
                 </Router>
             </ToDoState>
+            <Year></Year>
             </AuthState>
-
-
 
           );
        }

@@ -21,19 +21,20 @@ const Navbar=()=> {
 
    const onLogOut = ()=> {
     logOut()
+    window.location.reload();
 
    }
     return (
-                <fragment>
+                <>
                      {localStorage.isAuthenticated  ?  (<nav>
-                     <div> <Link onClick = {onLogOut} id= "link" to="#">
+                     <div> <Link onClick = {onLogOut} id= "link" to="/login">
                             sign out  
                             </Link>
                             </div>
                             <div>
                        
                             <Link id = "link2" to = "/">
-                                    
+                                  
                                        
                                     </Link>
                                   
@@ -54,7 +55,7 @@ const Navbar=()=> {
                                   
                                     </div>
                                     </nav>)}
-                                    </fragment>
+                                    </>
                          
                 
     );

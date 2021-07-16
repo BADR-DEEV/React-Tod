@@ -10,12 +10,19 @@ const AddToDo = () => {
 
 
      const toDoState = useContext(ToDoState)
-     const {  ItemToDo } = toDoState
+     const {  ItemToDo, GetTask } = toDoState
    
 
-    // const [Todo, SetTodo] = useState([null]);
+    
+
+useEffect(() => {
+    GetTask()
+},[])
+    
 
 
+
+// const [Todo, SetTodo] = useState([null]);
 
     // const handeling=(event)=> {
     //     const newValue = event.target.value;
@@ -35,13 +42,6 @@ const AddToDo = () => {
     // }
 
 
-const [bool , setBool] = useState(false)
-
-
-const handelNewClick = ()=>{
-    setBool(!bool)
-
-}
 
 
 
@@ -64,7 +64,7 @@ const handelNewClick = ()=>{
                 </button> */}
                 { <ToDO value={ItemToDo} /> }
 
-               <li onClick = {handelNewClick} style = {bool ? {textDecorationLine: 'line-through' , color : "green"} : null }></li>
+               
                 {/* //<li>buy bread</li>
                 <li>buy eggs</li> */}
             </div>

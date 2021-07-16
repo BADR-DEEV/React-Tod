@@ -3,12 +3,14 @@ import AuthContext from './AuthContext';
 import AuthReducer from './AuthReducer';
 import axios from 'axios';
 import qs from 'qs';
+import setAuthToken from '../../utils/setAuthToken';
 
 import {
 	LOGIN_USER,
 	REGISTER_USER,
 	LOGIN_FAIL,
-	LOG_OUT
+	LOG_OUT,
+	USER_LOAD
 	
 
 } from '../types';
@@ -21,6 +23,15 @@ const AuthState = props => {
 
 	const [state, dispatch] = useReducer(AuthReducer, initialState);
 
+
+//load user
+	const LoadUser =  () => {
+        // we want to set our token into a global header .because its a private route we need to set a token
+        //and load token to the header
+        if (localStorage.token) {
+            setAuthToken(localStorage.token);
+        }
+	}
 
 
 //logoutuser-user
@@ -45,6 +56,8 @@ const logOut = ()=> {
 					type: LOGIN_USER,
 					payLoad: res.data
 				})
+				LoadUser()
+				
 		}
 
 			//LoadUser();
@@ -77,6 +90,7 @@ const logOut = ()=> {
 						type: REGISTER_USER,
 						 payLoad: res.data 
 						})
+						LoadUser()
 					}
 				//LoadUser();
 			catch (err) {

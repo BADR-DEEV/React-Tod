@@ -21,6 +21,7 @@ export default (state, action) => {
             localStorage.removeItem("isAuthenticated");
             localStorage.removeItem("token");
             
+            
             return {
                 ...state,
                 isAuthenticated: localStorage.getItem("isAuthenticated"),
@@ -31,8 +32,6 @@ export default (state, action) => {
                 localStorage.removeItem("isAuthenticated");
                 localStorage.removeItem("token");
                 alert("invalid Email or password")
-                
-                
                 return {
                     ...state,
                     isAuthenticated: localStorage.getItem("isAuthenticated"),
