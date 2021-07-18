@@ -9,6 +9,7 @@
   #container h1 {
     font-size: 40px;
     font-weight: 200;
+    /* text-decoration: underline; */
   }
   #signH1{
     color:black;
@@ -35,7 +36,7 @@
   form button {
     appearance: none;
     /* outline: 0; */
-    background-color: #00b7ff;
+    background-color: #00a5e6;
     border: 0;
     padding: 10px 15px;
     color: black;
@@ -45,7 +46,7 @@
   }
 
   button:hover{
-      background-color: #dddddd;
+      background-color: white;
   }
 
   #input2{

@@ -12,7 +12,11 @@ const Year = ()=> {
 
    const current = new Date();
    const CurrentYear = current.getFullYear();
-   return (<p id = "year">@moomken{CurrentYear}</p>)
+   return (<div><p id = "year">@moomken{CurrentYear}</p>
+   <div id = "mother"><div id = "inner-circle"></div>
+   <div id = "inner-circle2"></div></div>
+   
+   </div>)
 
 
 

@@ -27,7 +27,7 @@ const Navbar=()=> {
     return (
                 <>
                      {localStorage.isAuthenticated  ?  (<nav>
-                     <div> <Link onClick = {onLogOut} id= "link" to="/login">
+                     <div> <Link onClick = {onLogOut} id= "signout" to="/login">
                             sign out  
                             </Link>
                             </div>

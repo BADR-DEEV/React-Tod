@@ -3,11 +3,71 @@
     /* position: relative; */
     /* text-align: center; */
     font-family:cursive;
-    position: absolute;
-    left: 20px;
+    position: fixed;
+    right: 20px;
    bottom:0;
    font-size: 15px;
+   color: black;
     
     
     
 }
+/* 
+#mother{
+    position: relative;
+    
+
+
+}  */
+
+
+
+
+
+#inner-circle{
+    width: 300px;
+    height: 200px; /* as the half of the width */
+    
+    border-top-left-radius: 250px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 250px; /* 100px of height + 10px of border */
+    border: 10px solid white;
+    border-width: 50px;
+    border-bottom: 0;
+    position: fixed;
+     bottom: 0;
+    left: -170px;
+    overflow-x: hidden;
+    box-shadow: 6px 6px 6px 6px  #00000040;
+    
+   
+    
+
+  
+  }
+
+
+  
+#inner-circle2{
+    width: 300px;
+    height: 200px; /* as the half of the width */
+    
+    border-bottom-left-radius: 250px;  /* 100px of height + 10px of border */
+    border-bottom-right-radius: 250px; /* 100px of height + 10px of border */
+    border: 10px solid white;
+    border-width: 50px;
+    border-top: 0;
+    position: fixed;
+     top: 0;
+    right: -170px;
+    overflow-x: hidden;
+    pointer-events: none;
+    box-shadow: 6px 6px 6px 6px  #00000040;
+
+
+
+
+    
+
+  
+  }
+

@@ -25,6 +25,7 @@ const handelNewClick = (data)=>{
     if(data.complete){
         const completed_at=null
         const info={Id ,completed_at}
+        console.log("meaw")
          
          setStyle(null)
          SendDate(info) 
@@ -52,9 +53,9 @@ const handelNewClick = (data)=>{
         
             { props.value != null ?  props.value.map((x)=> (
     
-<li  key = {x.id}  onClick = {()=> handelNewClick({id:x.id , complete:x.completed_at})} style = {x.completed_at===null ?null : {textDecorationLine : "line-through" , color : "#18c3ea"}}>
+<li  key = {x.id}  onClick = {()=> handelNewClick({id:x.id , complete:x.completed_at})} style = {x.completed_at===null ?null : {textDecorationLine : "line-through" , color : "#00a5e6"}}>
 
-<h4>{x.task.title}</h4>
+<h4> {x.task.title}</h4>
            
              
               <span> {x.task.content}</span> 

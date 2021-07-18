@@ -16,6 +16,9 @@ const Login = (props) => {
     const { Login, isAuthenticated} = authState
 
 
+
+
+    const [button , setButton] = useState("Sign in")
     
 
      const [auth, setAuth] = useState({
@@ -43,6 +46,12 @@ const Login = (props) => {
      }
     const onSubmit = e => {
          e.preventDefault();
+         setButton("signing in....")
+         setTimeout(()=> {
+            setButton("sign in")
+
+         }, 2000);
+         
          Login({
        
             identifier,
@@ -69,7 +78,7 @@ return(
                 <input name="password" type="password" placeholder="password" 
                 onChange={onChange} value={password} required/>
 
-   <button type = "submit">Sign in      
+   <button type = "submit">{button}      
                 </button>
     </form>
    

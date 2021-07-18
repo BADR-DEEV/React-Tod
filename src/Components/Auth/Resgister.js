@@ -9,6 +9,8 @@ const Resgister = (props) => {
     const authState = useContext(AuthContext)
     const { Register, isAuthenticated} = authState
 
+    const [button , setButton] = useState("Sign up")
+
      const [auth, setAuth] = useState({
         username:"",
         email: '',
@@ -32,6 +34,11 @@ const Resgister = (props) => {
 
      const onSubmit = e => {
          e.preventDefault();
+         setButton("signing up....")
+         setTimeout(()=> {
+            setButton("sign up")
+
+         }, 2000);
          Register({
             username,
             email,
@@ -73,7 +80,7 @@ return(
          
        
 
-            <button type='submit' > Sign up   </button>
+            <button type='submit' > {button}  </button>
 
          
 
