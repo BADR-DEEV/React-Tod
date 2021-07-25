@@ -20,12 +20,12 @@ const handelNewClick = (data)=>{
     
     const Id=data.id
     
- console.log(data.complete)
+//  console.log(data.complete)
 
     if(data.complete){
         const completed_at=null
         const info={Id ,completed_at}
-        console.log("meaw")
+        // console.log("meaw")
          
          setStyle(null)
          SendDate(info) 
@@ -36,16 +36,13 @@ const handelNewClick = (data)=>{
         const info={Id ,completed_at}
             setStyle({textDecorationLine : "line-through"  })
             SendDate(info) 
-            console.log(completed_at)
-            console.log(Id)
+            // console.log(completed_at)
+            // console.log(Id)
             //window.location.reload();
 
      }
 
-       
-    
-    
-    
+
     
 }
   return(
@@ -56,7 +53,7 @@ const handelNewClick = (data)=>{
 <li  key = {x.id}  onClick = {()=> handelNewClick({id:x.id , complete:x.completed_at})} style = {x.completed_at===null ?null : {textDecorationLine : "line-through" , color : "#00a5e6"}}>
 
 <h4> {x.task.title}</h4>
-           
+
              
               <span> {x.task.content}</span> 
               
@@ -68,7 +65,28 @@ const handelNewClick = (data)=>{
         )
 }
 
+
+
 export default ToDO;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

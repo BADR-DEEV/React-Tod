@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect} from "react"
 import AuthContext from "../../Context/Auth/AuthContext";
 
 import "./SigninStyles.css"
-import LoginFail from "../../Context/Auth/AuthState"
+//import LoginFail from "../../Context/Auth/AuthState"
 
 
 
@@ -50,7 +50,7 @@ const Login = (props) => {
          setTimeout(()=> {
             setButton("sign in")
 
-         }, 2000);
+         }, 2500);
          
          Login({
        
@@ -58,8 +58,8 @@ const Login = (props) => {
              password
          }
          );
-         console.log(identifier)
-         console.log(password)
+        //  console.log(identifier)
+        //  console.log(password)
 
      };
 

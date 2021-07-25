@@ -56,8 +56,8 @@ return(
 <br/>
 <div>
        
-       <
-           required />
+       {/* <
+           required /> */}
 </div>
 <div>
         
@@ -66,7 +66,7 @@ return(
  </div>
 
 <div>
-        
+  
                 <input id="input2" type="email" placeholder="Email address" name="email" value={email} required
                     onChange={onChange}/>
          </div>

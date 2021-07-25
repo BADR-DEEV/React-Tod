@@ -43,7 +43,7 @@ const logOut = ()=> {
 	//loginuser-user
 	const Login = async form => {
 		const data=qs.stringify(form)
-		console.log(data)
+		// console.log(data)
 		const config = {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'

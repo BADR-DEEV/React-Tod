@@ -53,7 +53,7 @@ const ToDoState = props => {
 		try {
 			// console.log(Date.completed_at)
 			const res = await axios.put(`http://localhost:3000/daily-tasks/${Date.Id}` ,  Date, config)
-			console.log(res.data)
+			// console.log(res.data)
 
 			
 			

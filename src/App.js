@@ -8,7 +8,7 @@ import Login from "./Components/Auth/Login";
 import Resgister from "./Components/Auth/Resgister";
 import PrivateRoute from "./Components/privetRout"
 import setAuthToken from "./utils/setAuthToken"
-import Year from "./Components/footer";
+import Footer from "./Components/footer";
 
 
 
@@ -32,7 +32,7 @@ setAuthToken(localStorage.token)
                     </Switch>
                 </Router>
             </ToDoState>
-            <Year></Year>
+            <Footer/>
             </AuthState>
 
           );
