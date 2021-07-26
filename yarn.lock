@@ -9275,6 +9275,11 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
+"react-service-worker@^0.1.1":
+  "integrity" "sha512-NNv1QfF7lpH6ir/J3TrRTcLqP/veE+qRnCyvnZujo2lVCSpszYZRigceNhic+x9FwsBGsvkGrgZiXiq4C+VbxA=="
+  "resolved" "https://registry.npmjs.org/react-service-worker/-/react-service-worker-0.1.1.tgz"
+  "version" "0.1.1"
+
 "react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>=15", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"

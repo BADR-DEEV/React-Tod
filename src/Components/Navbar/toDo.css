@@ -1,14 +1,13 @@
-.complete {
+/* .completenull {
     text-decoration: line-through;
-    color: green;
+    color: #00a5e6;
+
+
 }
+ */
 
-
-/* #checkBox{
-
-    text-align: left;
-    position: relative;
-    padding: 0.5rem; 
-
-
-  } */
+#title {
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}

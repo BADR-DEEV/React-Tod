@@ -33,10 +33,7 @@ const Navbar=()=> {
                             </div>
                             <div>
                        
-                            <Link id = "link2" to = "/">
-                                  
-                                       
-                                    </Link>
+                           
                                   
                                     </div> 
                                     </nav>

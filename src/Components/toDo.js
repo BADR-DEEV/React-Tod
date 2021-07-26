@@ -52,7 +52,7 @@ const handelNewClick = (data)=>{
     
 <li  key = {x.id}  onClick = {()=> handelNewClick({id:x.id , complete:x.completed_at})} style = {x.completed_at===null ?null : {textDecorationLine : "line-through" , color : "#00a5e6"}}>
 
-<h4> {x.task.title}</h4>
+<p id = "title"> {x.task.title}</p>
 
              
               <span> {x.task.content}</span> 

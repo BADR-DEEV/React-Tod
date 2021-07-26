@@ -46,6 +46,7 @@ const Login = (props) => {
      }
     const onSubmit = e => {
          e.preventDefault();
+         
          setButton("signing in....")
          setTimeout(()=> {
             setButton("sign in")
@@ -68,7 +69,7 @@ return(
         <form id="form" onSubmit={onSubmit} method = "post">
        
         <h1 id = "signH1">Enter Your Account</h1>
-       {localStorage.isAuthenticated}
+       
      
 
                 <input name="identifier" type="email" placeholder="Email address" 

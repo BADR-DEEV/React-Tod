@@ -52,16 +52,17 @@ body {
     
   }
 
-  h4{
+  /* h4{
     max-width:200px;
     word-wrap:break-word;
     cursor: pointer;
-  }
+  } */
   span {
 
       max-width:200px;
     word-wrap:break-word;
     cursor: pointer;
+   
   }
    
   /* .form input { 
@@ -89,7 +90,7 @@ body {
     border-radius: 5px;
     /* background-color: #ffeaa7; */
   }
-  button span {
+  /* button span {
     background: #f1f5f8;
     display: block;
     padding: 0.5rem 1rem;
@@ -97,7 +98,7 @@ body {
     margin-bottom:-3px;
     border-radius: 5px;
     border: 2px solid hsl(198, 1%, 29%);
-  }
+  } */
   /* span:hover {
     background-color: #18c3ea;
   } */
@@ -119,14 +120,14 @@ body {
 
   } */
 
-  .line{
+  /* .line{
     text-align: left;
     position: relative;
     padding: 1rem;
     margin-left: 100px;
     margin-top:50px;
 
-  }
+  } */
 /*   
   input[type=checkbox]:checked + li{
     text-decoration: line-through;
@@ -146,7 +147,7 @@ body {
 
 
 
- @media screen and (max-width: 768px) {
+ @media all and (max-width: 768px) {
 
   .container {
     position: relative;

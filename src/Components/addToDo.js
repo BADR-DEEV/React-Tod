@@ -23,32 +23,18 @@ useEffect(() => {
 
 
 // const [Todo, SetTodo] = useState([null]);
-
     // const handeling=(event)=> {
     //     const newValue = event.target.value;
     //     SetTodo(newValue);
     //     event.target.name = null
     // }
-
     // const handelClick = (e) => {
-        
-      
-
-    //     ADDToDO(Todo);
-
+   //     ADDToDO(Todo);
     //     SetTodo([null])
-        
- 
     // }
 
 
 
-
-
-
-
-
-  
     return (
 
         <div className="container">

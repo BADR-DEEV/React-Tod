@@ -1,7 +1,6 @@
 import React, { useState, useContext,useEffect }from "react"
 import AuthContext from "../../Context/Auth/AuthContext";
 
-
 import "./SigninStyles.css"
 
 
@@ -39,6 +38,7 @@ const Resgister = (props) => {
             setButton("sign up")
 
          }, 2000);
+         
          Register({
             username,
             email,
