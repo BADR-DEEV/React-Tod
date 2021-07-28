@@ -1,15 +1,20 @@
-import React ,{useState , useContext} from "react";
+import React ,{useContext} from "react";
 import ToDoState from "../Context/ToDo/ToDoContext";
 import "../Components/Navbar/toDo.css"
 
 //main function is to map throught the to do and display them 
 const ToDO = (props) => {
-  
+
+    
+    //   getRootUrl()
+
+
+    
 
     //const [bool , setBool] = useState(false)
-    const [styles , setStyle] = useState()
+    // const [styles , setStyle] = useState()
 
-
+  
 
 
 
@@ -27,14 +32,14 @@ const handelNewClick = (data)=>{
         const info={Id ,completed_at}
         // console.log("meaw")
          
-         setStyle(null)
+        //  setStyle(null)
          SendDate(info) 
          //window.location.reload();
      }else{
         const today =  new Date()
         const completed_at = today.toISOString()
         const info={Id ,completed_at}
-            setStyle({textDecorationLine : "line-through"  })
+            // setStyle({textDecorationLine : "line-through"  })
             SendDate(info) 
             // console.log(completed_at)
             // console.log(Id)

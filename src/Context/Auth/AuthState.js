@@ -5,6 +5,8 @@ import axios from 'axios';
 import qs from 'qs';
 import setAuthToken from '../../utils/setAuthToken';
 
+import local from "../../config"
+
 import {
 	LOGIN_USER,
 	REGISTER_USER,
@@ -37,6 +39,7 @@ const AuthState = props => {
 //logoutuser-user
 const logOut = ()=> {
 	dispatch({ type: LOG_OUT, payLoad: null })
+	// console.log(config)
 	
 
 }
@@ -50,7 +53,7 @@ const logOut = ()=> {
 			}
 		}
 			try {
-				const res = await axios.post('http://localhost:3000/auth/local/', data, config);
+				const res = await axios.post( `${local.apiUrl}/auth/local/`, data, config);
 				
 				dispatch({
 					type: LOGIN_USER,
@@ -84,7 +87,7 @@ const logOut = ()=> {
 				}
 			}
 				try {
-					const res = await axios.post('http://localhost:3000/auth/local/register', form, config);
+					const res = await axios.post(`${local.apiUrl}/auth/local/register`, form, config);
 					
 					dispatch({ 
 						type: REGISTER_USER,

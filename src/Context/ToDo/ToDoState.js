@@ -2,7 +2,7 @@ import React, { useReducer } from 'react'
 import ToDoContext from './ToDoContext';
 import ToDoReducer from './ToDoReducer';
 import axios from "axios"
-
+import local from "../../config"
 
 import {
 	GET_TASK,
@@ -23,7 +23,7 @@ const ToDoState = props => {
 		
 		
 		try {
-			const res = await axios.get('http://localhost:3000/daily-tasks')
+			const res = await axios.get(`${local.apiUrl}/daily-tasks`)
 			
 			
 			dispatch({
@@ -52,7 +52,7 @@ const ToDoState = props => {
 
 		try {
 			// console.log(Date.completed_at)
-			const res = await axios.put(`http://localhost:3000/daily-tasks/${Date.Id}` ,  Date, config)
+			const res = await axios.put(`${local.apiUrl}/daily-tasks/${Date.Id}` ,  Date, config)
 			// console.log(res.data)
 
 			

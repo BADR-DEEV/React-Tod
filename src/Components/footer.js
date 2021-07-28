@@ -1,4 +1,4 @@
-import react from "react"
+
 
 import "./footer.css"
 
@@ -10,8 +10,8 @@ import "./footer.css"
 const Footer = ()=> {
 
 
-   const current = new Date();
-   const CurrentYear = current.getFullYear();
+   // const current = new Date();
+   // const CurrentYear = current.getFullYear();
    return (<div>
   
    <div id = "mother"><div id = "inner-circle"></div>
@@ -19,7 +19,7 @@ const Footer = ()=> {
    </div>)
 
 
-{/* <p id = "year">@Moomken{CurrentYear}</p>  */}
+/* <p id = "year">@Moomken{CurrentYear}</p>  */
 
 
 }

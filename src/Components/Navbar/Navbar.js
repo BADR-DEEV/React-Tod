@@ -15,7 +15,7 @@ const Navbar=()=> {
 
 
     const authContext = useContext(AuthContext)
-    const { logOut , isAuthenticated } = authContext
+    const { logOut} = authContext
 
 
 
